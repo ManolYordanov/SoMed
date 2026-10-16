@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+}
+
+/* Eye-care warmth filter modifier */
+.eye-care-warmth {
+  filter: sepia(0.18) saturate(0.92) brightness(0.97);
+}
+
+/* Hide scrollbars for snap feeds while retaining scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Snap scroll mandatory */
+.snap-y-mandatory {
+  scroll-snap-type: y mandatory;
+}
+.snap-item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Keyframe for spinning record disk */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 5s linear infinite;
+}
+
+/* Audio wave bars animation */
+@keyframes audioWave {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 16px;
+  }
+}
+
+.animate-audio-bar-1 {
+  animation: audioWave 1s ease-in-out infinite;
+}
+.animate-audio-bar-2 {
+  animation: audioWave 1.2s ease-in-out infinite 0.2s;
+}
+.animate-audio-bar-3 {
+  animation: audioWave 0.8s ease-in-out infinite 0.4s;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "VibeStream - Video Community & Chat",
+  "description": "Infinite scrolling video feed, user accounts, video posting, friend chats, eye-strain dark mode, and real-time push notifications.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
